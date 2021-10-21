@@ -4,7 +4,14 @@ The utility for extracting info about installed (used) tools inside docker conta
 
 ## Usage
 
-1. Clone repo or 
+1. Clone repo
+    ```bash
+    git clone <repo URL>
+    cd <cloned repo folder>
+    # create venv if needed 
+    pip install . #install all requirements
+    ```
+    or 
 
     ```bash
     pip install -U git+<repo URL>
@@ -20,7 +27,8 @@ The utility for extracting info about installed (used) tools inside docker conta
     ```
     where params are:
     ```bash
-    Creates changelog file based on toolset.xml. Extracts version from docker container, using toolset.md template
+    Creates changelog file based on jinja2 template. Extracts versions from docker image, using xml description. 
+    Parses BASE IMAGE from Dockerfile
 
     optional arguments:
     -h, --help            show this help message and exit
@@ -33,7 +41,7 @@ The utility for extracting info about installed (used) tools inside docker conta
     --outputtemplatefile OUTPUTTEMPLATEFILE
                             path to Junja2 template file for rendering and createtin well-formated changelog
     --mode {append,create}
-                        either create new changelog file or append to existing one
+                            either create new changelog file or append to existing one
     ```
 1. Tools to testfile example
     ```xml

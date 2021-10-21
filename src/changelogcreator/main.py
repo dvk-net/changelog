@@ -6,7 +6,6 @@ from pathlib import Path
 from sys import stderr
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from bs4 import BeautifulSoup
-# args.image = '8fe56664df0a'
 
 regex = r"^FROM .*"
 
@@ -52,7 +51,7 @@ def tool_info_extractor(soup, tool, script_args, is_version_in_json=False):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Creates changelog file based on toolset.xml. Extracts version from docker container, using toolset.md template')
+        description='''Creates changelog file based on jinja2 template. Extracts versions from docker image, using xml description. Parses BASE IMAGE from Dockerfile''')
 
     parser.add_argument('--image', type=str, required=True,
                         help='an image ID or an image name')
