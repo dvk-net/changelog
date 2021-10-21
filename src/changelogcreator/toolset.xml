@@ -1,0 +1,28 @@
+<tools>
+    <apt-tools>
+        <apt-tool>
+            <name>Python 2</name>
+            <command-to-check-version>apt-cache show python2</command-to-check-version>
+        </apt-tool>
+        <apt-tool>
+            <name>Python 3.8</name>
+            <command-to-check-version>apt-cache show python3.8</command-to-check-version>
+        </apt-tool>
+        <apt-tool>
+            <name>Python 3.11</name>
+            <command-to-check-version>apt-cache show python3.11</command-to-check-version>
+        </apt-tool>
+    </apt-tools>
+    <python-pip-tools>
+        <python-pip-tool>
+            <name>python conan package</name>
+            <command-to-check-version>pip show conan</command-to-check-version>
+        </python-pip-tool>
+    </python-pip-tools>
+    <azure-cli-tools>
+        <azure-cli-tool>
+            <name>Azure CLI</name>
+            <command-to-check-version>az version</command-to-check-version>
+        </azure-cli-tool>
+    </azure-cli-tools>
+</tools>
